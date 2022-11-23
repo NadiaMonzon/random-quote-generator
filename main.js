@@ -31,16 +31,38 @@ const renderQuotes = (data) => {
   author.classList.remove("animate__bounceOut");
 };
 
-const changeClassName = () => {
+const changeAnimation = () => {
   quote.classList.add("animate__bounceOut");
   quote.classList.remove("animate__bounceIn");
   author.classList.add("animate__bounceOut");
   author.classList.remove("animate__bounceIn");
 };
 
+const changeColors = () => {
+  console.log(mainContainer.classList);
+  mainContainer.classList.toggle(
+    `main-${generateClassNumber(10)}`,
+    `main-${generateClassNumber(10)}`
+  );
+  quoteButton.classList.toggle(
+    `main-${generateClassNumber(10)}`,
+    `main-${generateClassNumber(10)}`
+  );
+  quote.classList.toggle(
+    `letter-color-${generateClassNumber(10)}`,
+    `letter-color-${generateClassNumber(10)}`
+  );
+  author.classList.toggle(
+    `letter-color-${generateClassNumber(10)}`,
+    `letter-color-${generateClassNumber(10)}`
+  );
+};
+
 const handleClick = () => {
+  console.log(generateClassNumber(10));
   getQuote();
-  changeClassName();
+  changeAnimation();
+  changeColors();
 };
 
 getQuote();
