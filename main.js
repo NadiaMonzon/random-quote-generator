@@ -12,10 +12,7 @@ const getQuote = () => {
       return response.json();
     })
     .then(function (data) {
-      quote.innerHTML = data.content;
-      quote.id = data._id;
-      author.innerHTML = data.author;
-      // changeClassName();
+      renderQuotes(data);
     })
     .catch((error) => console.log(error));
 };
@@ -24,18 +21,26 @@ const generateClassNumber = (max) => {
   return Math.ceil(Math.random() * max);
 };
 
-// const changeClassName = () => {
-//   console.log(mainContainer.classList);
-//   for (let i = 0; i < mainContainer.classList.length; i++) {
-//     if (i === mainContainer.classList.length) {
-//       mainContainer.classList.remove(`main-${generateClassNumber(10)}`);
-//       mainContainer.classList.add(`main-${generateClassNumber(10)}`);
-//     }
-//   }
-// };
+const renderQuotes = (data) => {
+  quote.innerHTML = data.content;
+  quote.id = data._id;
+  author.innerHTML = data.author;
+  quote.classList.add("animate__bounceIn");
+  quote.classList.remove("animate__bounceOut");
+  author.classList.add("animate__bounceIn");
+  author.classList.remove("animate__bounceOut");
+};
+
+const changeClassName = () => {
+  quote.classList.add("animate__bounceOut");
+  quote.classList.remove("animate__bounceIn");
+  author.classList.add("animate__bounceOut");
+  author.classList.remove("animate__bounceIn");
+};
+
 const handleClick = () => {
   getQuote();
-  // changeClassName();
+  changeClassName();
 };
 
 getQuote();

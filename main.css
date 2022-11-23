@@ -140,4 +140,15 @@ main {
     justify-content: center;
     align-self: center;
     width: 35%;
+    cursor: pointer;
+}
+
+.animate__bounceIn {
+    --animate-duration: 2s;
+    animation-iteration-count: 1
+}
+
+.animate__bounceOut {
+    --animate-duration: 3s;
+    animation-iteration-count: 1
 }
