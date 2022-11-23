@@ -1,43 +1,143 @@
-.container {
-    border: 1px solid black;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
 }
 
-.container-1 {
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-1 {
     background-color: #5677e1;
 }
 
-.container-2 {
+.main-2 {
     background-color: #7b0782;
 }
 
-.container-3 {
+.main-3 {
     background-color: #8f1062;
 }
 
-.container-4 {
+.main-4 {
     background-color: #3f1d48;
 }
 
-.container-5 {
+.main-5 {
     background-color: #90b87e;
 }
 
-.container-6 {
+.main-6 {
     background-color: #63b996;
 }
 
-.container-7 {
+.main-7 {
     background-color: #0ff93e;
 }
 
-.container-8 {
+.main-8 {
     background-color: #17306f;
 }
 
-.container-9 {
+.main-9 {
     background-color: #fe8367;
 }
 
-.container-10 {
+.main-10 {
     background-color: #0d69f8;
+}
+
+.letter {
+    padding: 15px;
+}
+
+.letter-color-1 {
+    color: #5677e1;
+    font-weight: 600;
+}
+
+.letter-color-2 {
+    color: #7b0782;
+    font-weight: 600;
+}
+
+.letter-color-3 {
+    color: #8f1062;
+    font-weight: 600;
+}
+
+.letter-color-4 {
+    color: #3f1d48;
+    font-weight: 600;
+}
+
+.letter-color-5 {
+    color: #90b87e;
+    font-weight: 600;
+}
+
+.letter-color-6 {
+    color: #63b996;
+    font-weight: 600;
+}
+
+.letter-color-7 {
+    color: #0ff93e;
+    font-weight: 600;
+}
+
+.letter-color-8 {
+    color: #17306f;
+    font-weight: 600;
+}
+
+.letter-color-9 {
+    color: #fe8367;
+    font-weight: 600;
+}
+
+.letter-color-10 {
+    color: #0d69f8;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.fa-quote-left {
+    padding: 15px;
+}
+
+.author {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.quote-buttton {
+    padding: 13px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 35%;
 }
