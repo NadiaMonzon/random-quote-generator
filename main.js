@@ -7,7 +7,7 @@ const container = document.querySelector(".js-container");
 const mainContainer = document.querySelector(".js-main");
 
 const getQuote = () => {
-  fetch("http://api.quotable.io/random")
+  fetch("https://api.quotable.io/random")
     .then(function (response) {
       return response.json();
     })
