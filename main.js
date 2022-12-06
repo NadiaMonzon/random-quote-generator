@@ -29,6 +29,10 @@ const renderQuotes = (data) => {
   quote.classList.remove("animate__bounceOut");
   author.classList.add("animate__bounceIn");
   author.classList.remove("animate__bounceOut");
+  mainContainer.classList.add(`main-${generateClassNumber(10)}`);
+  quoteButton.classList.add(`main-${generateClassNumber(10)}`);
+  quote.classList.add(`letter-color-${generateClassNumber(10)}`);
+  author.classList.add(`letter-color-${generateClassNumber(10)}`);
 };
 
 const changeAnimation = () => {
@@ -40,22 +44,10 @@ const changeAnimation = () => {
 
 const changeColors = () => {
   console.log(mainContainer.classList);
-  mainContainer.classList.toggle(
-    `main-${generateClassNumber(10)}`,
-    `main-${generateClassNumber(10)}`
-  );
-  quoteButton.classList.toggle(
-    `main-${generateClassNumber(10)}`,
-    `main-${generateClassNumber(10)}`
-  );
-  quote.classList.toggle(
-    `letter-color-${generateClassNumber(10)}`,
-    `letter-color-${generateClassNumber(10)}`
-  );
-  author.classList.toggle(
-    `letter-color-${generateClassNumber(10)}`,
-    `letter-color-${generateClassNumber(10)}`
-  );
+  mainContainer.classList.remove(mainContainer.classList.item(1));
+  quoteButton.classList.remove(quoteButton.classList.item(2));
+  quote.classList.remove(quote.classList.item(1));
+  author.classList.remove(author.classList.item(2));
 };
 
 const handleClick = () => {
@@ -68,3 +60,5 @@ const handleClick = () => {
 getQuote();
 
 quoteButton.addEventListener("click", handleClick);
+
+//.item()
